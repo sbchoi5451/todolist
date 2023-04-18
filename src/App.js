@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import "./App.css"
+import Worklist from "./component/Worklist"
+import Donelist from "./component/Donelist"
+import Layout from "./component/Layout"
+
 
 function App() {
+
+  const [todo, setTodo] = useState([
+    { id: 0, title: "테스트입니다1", body: "테스트입니다1", isDone: false },
+    { id: 1, title: "테스트입니다2", body: "테스트입니다2", isDone: true }
+  ])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='body'>
+      <div className='head'>
+        <div>My Todo List</div>
+        <div>React</div>
+      </div>
+      <Layout todo={todo} setTodo={setTodo} />
+      <Worklist todo={todo} setTodo={setTodo} />
+      <Donelist todo={todo} setTodo={setTodo} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

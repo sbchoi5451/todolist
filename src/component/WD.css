@@ -1,0 +1,40 @@
+.box {
+    width: 300px;
+    height: 200px;
+    border: 4px solid rgba(14, 105, 88, 0.878);
+    border-radius: 10px;
+    display: flex;
+    padding: 10px 10px 10px 10px;
+    margin: 0 0 20px 20px;
+}
+
+.worklist {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.listing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.completebtn {
+    border: 3px solid rgb(6, 162, 229);
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 4px 4px 4px 4px;
+    margin-right: 10px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn {
+    text-align: center;
+    display: flex;
+    margin-top: 50px;
+}
